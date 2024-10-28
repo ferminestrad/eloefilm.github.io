@@ -1,0 +1,81 @@
+/* Estilo básico */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #181818;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-info a.email-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-info a.email-link:hover {
+    color: #d1d1d1;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); /* Efecto de agrandamiento en hover */
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px;
+    }
+    .contact-container {
+        padding: 15px;
+        width: 90%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .social-icons a img {
+        width: 20px;
+        height: 20px;
+        margin: 0 3px;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .contact-info p {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+    .social-icons a img {
+        width: 18px;
+        height: 18px;
+    }
+}
