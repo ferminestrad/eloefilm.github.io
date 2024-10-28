@@ -71,6 +71,18 @@ section {
     height: auto;
     cursor: pointer;
 }
+
+.horizontal-photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.horizontal-gallery-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
 /* Estilos de la galería horizontal */
 .horizontal-photo-gallery {
     display: flex;               /* Usa flexbox para alinear las imágenes en una fila */
