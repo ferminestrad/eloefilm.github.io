@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eloefilm</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el encabezado */
+        header {
+            background-color: rgb(0, 0, 0); /* Fondo negro */
+            display: flex; /* Utiliza flexbox */
+            justify-content: space-between; /* Alinea los elementos al inicio y al final */
+            align-items: center; /* Centra verticalmente los elementos */
+            padding: 20px;
+        }
+
+        /* Estilos para la imagen de fondo */
+        .background-container {
+            width: 200%;
+            height: 100vh; /* Toma el 100% del alto de la pantalla */
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            position: relative; /* Posición relativa para alinear la imagen */
+        }
+
+        .background-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Escala la imagen para que cubra todo el área del contenedor */
+            position: absolute; /* Posición absoluta para cubrir todo el contenedor */
+            top: 0; /* Posiciona la imagen en la parte superior */
+            left: 0; /* Posiciona la imagen en la parte izquierda */
+        }
+
+        /* Estilos para el logotipo */
+        .logo {
+            width: 400px; /* Tamaño del logotipo */
+            height: auto; /* Ajusta la altura automáticamente según el ancho */
+        }
+
+
+        header nav a {
+            color: white; /* Color blanco para los enlaces */
+            text-decoration: none; /* Sin subrayado */
+            margin: 0 10px; /* Espacio entre los enlaces */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Envuelve el logotipo en un enlace -->
+        <a href="index.html">
+        <!-- Reemplaza el título con la imagen del logotipo -->
+        <img src="images/fec.png" alt="Logotipo" class="logo">
+
+        <!-- Enlaces a las secciones -->
+        <nav>
+            <a href="#gallery">Portafolio</a>
+            <a href="#contactO">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <div class="photo-gallery">
+            <img src="images/A1.jpg" alt="Foto 1" class="gallery-image" onclick="openModal('modal1')">
+            <img src="images/A2.jpg" alt="Foto 2" class="gallery-image" onclick="openModal('modal2')">
+            <img src="images/A3.jpg" alt="Foto 3" class="gallery-image" onclick="openModal('modal3')">
+            <img src="images/D.jpg" alt="Foto 4" class="gallery-image" onclick="openModal('modal4')">
+            <img src="images/TY.jpg" alt="Foto 5" class="gallery-image" onclick="openModal('modal5')">
+            
+            <!-- Agregar más imágenes según sea necesario -->
+        </div>
+    </section>
+    
+    <section id="horizontal-gallery">
+        <div class="horizontal-photo-gallery">
+            <img src="images/E1.jpg" alt="Foto 6" class="horizontal-gallery-image" onclick="openModal('modal6')">
+            <img src="images/E2.jpg" alt="Foto 7" class="horizontal-gallery-image" onclick="openModal('modal7')">
+            <img src="images/E3.jpg" alt="Foto 8" class="horizontal-gallery-image" onclick="openModal('modal8')">
+            <img src="images/A4.jpg" alt="Foto 9" class="horizontal-gallery-image" onclick="openModal('modal9')">
+            <img src="images/L.jpg" alt="Foto 10" class="horizontal-gallery-image" onclick="openModal('modal10')">
+            <img src="images/MDE.jpg" alt="Foto 11" class="horizontal-gallery-image" onclick="openModal('modal11')">
+        </div>
+    </section>
+
+    <section id="g3">
+        <div class="photo-g3">
+            <img src="images/P1.jpg" alt="Foto 12" class="g3-image" onclick="openModal('modal12')">
+            <img src="images/P2.jpg" alt="Foto 13" class="g3-image" onclick="openModal('modal13')">
+            <img src="images/T1.jpg" alt="Foto 14" class="g3-image" onclick="openModal('modal14')">
+        </div>
+
+
+    </section>
+
+    <div id="modal1" class="modal">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img class="modal-content" src="images/A1.jpg" alt="Foto 1">
+        <div class="prev" onclick="prevModal('modal1', 'modal2')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal1', 'modal2')">&#10095;</div>
+    </div>
+    
+    <div id="modal2" class="modal">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img class="modal-content" src="images/A2.jpg" alt="Foto 2">
+        <div class="prev" onclick="prevModal('modal2', 'modal1')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal2', 'modal3')">&#10095;</div>
+    </div>
+    
+    <div id="modal3" class="modal">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <img class="modal-content" src="images/A3.jpg" alt="Foto 3">
+        <div class="prev" onclick="prevModal('modal3', 'modal2')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal3', 'modal4')">&#10095;</div>
+    </div>
+    
+    <div id="modal4" class="modal">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <img class="modal-content" src="images/D.jpg" alt="Foto 4">
+        <div class="prev" onclick="prevModal('modal4', 'modal3')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal4', 'modal5')">&#10095;</div>
+    </div>
+    
+    <div id="modal5" class="modal">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <img class="modal-content" src="images/TY.jpg" alt="Foto 5">
+        <div class="prev" onclick="prevModal('modal5', 'modal4')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal5', 'modal6')">&#10095;</div>
+    </div>
+    
+    <div id="modal6" class="modal">
+        <span class="close" onclick="closeModal('modal6')">&times;</span>
+        <img class="modal-content" src="images/E1.jpg" alt="Foto 6">
+        <div class="prev" onclick="prevModal('modal6', 'modal5')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal6', 'modal7')">&#10095;</div>
+    </div>
+    
+    <div id="modal7" class="modal">
+        <span class="close" onclick="closeModal('modal7')">&times;</span>
+        <img class="modal-content" src="images/E2.jpg" alt="Foto 7">
+        <div class="prev" onclick="prevModal('modal7', 'modal6')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal7', 'modal8')">&#10095;</div>
+    </div>
+    
+    <div id="modal8" class="modal">
+        <span class="close" onclick="closeModal('modal8')">&times;</span>
+        <img class="modal-content" src="images/E3.jpg" alt="Foto 8">
+        <div class="prev" onclick="prevModal('modal8', 'modal7')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal8', 'modal9')">&#10095;</div>
+    </div>
+    
+    <div id="modal9" class="modal">
+        <span class="close" onclick="closeModal('modal9')">&times;</span>
+        <img class="modal-content" src="images/A4.jpg" alt="Foto 9">
+        <div class="prev" onclick="prevModal('modal9', 'modal8')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal9', 'modal10')">&#10095;</div>
+    </div>
+    
+    <div id="modal10" class="modal">
+        <span class="close" onclick="closeModal('modal10')">&times;</span>
+        <img class="modal-content" src="images/L.jpg" alt="Foto 10">
+        <div class="prev" onclick="prevModal('modal10', 'modal9')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal10', 'modal11')">&#10095;</div>
+    </div>
+    
+    <div id="modal11" class="modal">
+        <span class="close" onclick="closeModal('modal11')">&times;</span>
+        <img class="modal-content" src="images/MDE.jpg" alt="Foto 11">
+        <div class="prev" onclick="prevModal('modal11', 'modal10')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal11', 'modal12')">&#10095;</div>
+    </div>
+    
+    <div id="modal12" class="modal">
+        <span class="close" onclick="closeModal('modal12')">&times;</span>
+        <img class="modal-content" src="images/P1.jpg" alt="Foto 12">
+        <div class="prev" onclick="prevModal('modal12', 'modal11')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal12', 'modal13')">&#10095;</div>
+    </div>
+    
+    <div id="modal13" class="modal">
+        <span class="close" onclick="closeModal('modal13')">&times;</span>
+        <img class="modal-content" src="images/P2.jpg" alt="Foto 13">
+        <div class="prev" onclick="prevModal('modal13', 'modal12')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal13', 'modal14')">&#10095;</div>
+    </div>
+    
+    <div id="modal14" class="modal">
+        <span class="close" onclick="closeModal('modal14')">&times;</span>
+        <img class="modal-content" src="images/T1.jpg" alt="Foto 14">
+        <div class="prev" onclick="prevModal('modal14', 'modal13')">&#10094;</div>
+        <div class="next" onclick="nextModal('modal14', 'modal1')">&#10095;</div>
+    </div>
+    
+    <!-- Agregar más modals según sea necesario -->
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif; /* Tipografía Montserrat para toda la web */
+}
+
+
+body {
+    background-color: black; /* Establece el fondo negro */
+    color: white; /* Cambia el color del texto a blanco para mayor contraste */
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Estilos de la galería */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+/* Estilos de la galería horizontal */
+.horizontal-photo-gallery {
+    display: flex;               /* Usa flexbox para alinear las imágenes en una fila */
+    overflow-x: hidden;            /* Permite el desplazamiento horizontal */
+    gap: 10px;                   /* Espacio entre imágenes */
+    padding: 10px;               /* Agrega algo de espacio alrededor de la galería */
+    scroll-snap-type: x mandatory; /* Suaviza el desplazamiento en dispositivos compatibles */
+}
+
+.horizontal-gallery-image {
+    flex: 0 0 auto;              /* Asegura que las imágenes mantengan su tamaño y no se reduzcan */
+    width: 300px;                /* Ajusta el tamaño de las imágenes */
+    height: auto;                /* Mantiene la proporción de las imágenes */
+    cursor: pointer;
+    scroll-snap-align: start;    /* Alinea cada imagen al inicio al hacer scroll */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre las imágenes */
+    transition: transform 0.2s ease-in-out; /* Agrega una transición suave al pasar el ratón sobre las imágenes */
+}
+.photo-g3 {
+    display: flex;               /* Usa flexbox para alinear las imágenes en una fila */
+    overflow-x: hidden;            /* Permite el desplazamiento horizontal */
+    gap: 10px;                   /* Espacio entre imágenes */
+    padding: 10px;               /* Agrega algo de espacio alrededor de la galería */
+    scroll-snap-type: x mandatory; /* Suaviza el desplazamiento en dispositivos compatibles */
+}
+
+.g3-image {
+    flex: 0 0 auto;              /* Asegura que las imágenes mantengan su tamaño y no se reduzcan */
+    width: 300px;                /* Ajusta el tamaño de las imágenes */
+    height: auto;                /* Mantiene la proporción de las imágenes */
+    cursor: pointer;
+    scroll-snap-align: start;    /* Alinea cada imagen al inicio al hacer scroll */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre las imágenes */
+    transition: transform 0.2s ease-in-out; /* Agrega una transición suave al pasar el ratón sobre las imágenes */
+}
+
+
+/* Estilos de la galería */
+.photo-gallery {
+    display: flex;
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Hace que las imágenes se desplacen suavemente */
+    -webkit-overflow-scrolling: touch; /* Añade desplazamiento suave en dispositivos móviles */
+    padding: 10px; /* Espaciado alrededor de las imágenes */
+    width: calc(100% + 20px); /* Ancho total de la galería incluyendo el espaciado */
+}
+
+.gallery-image {
+    flex: 0 0 auto;
+    width: 200px; /* Ancho fijo de las imágenes */
+    height: auto;
+    scroll-snap-align: start; /* Alinea las imágenes con el inicio del contenedor */
+    margin-right: 10px; /* Espacio entre las imágenes */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre las imágenes */
+    transition: transform 0.2s ease-in-out; /* Agrega una transición suave al pasar el ratón sobre las imágenes */
+}
+
+.gallery-image:hover {
+    transform: scale(1.1); /* Hace que la imagen se agrande ligeramente al pasar el ratón sobre ella */
+}
+.g3-image:hover {
+    transform: scale(1.1); /* Hace que la imagen se agrande ligeramente al pasar el ratón sobre ella */
+}
+.horizontal-gallery-image:hover {
+    transform: scale(1.1); /* Hace que la imagen se agrande ligeramente al pasar el ratón sobre ella */
+}
+/* Estilos de la flecha */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Posiciona la flecha izquierda */
+.prev {
+    left: 0;
+}
+
+/* Posiciona la flecha derecha */
+.next {
+    right: 0;
+}
