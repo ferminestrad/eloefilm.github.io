@@ -37,7 +37,7 @@
 
         /* Estilos para el logotipo */
         .logo {
-            width: 400px; /* Tamaño del logotipo */
+            width: 200px; /* Tamaño del logotipo */
             height: auto; /* Ajusta la altura automáticamente según el ancho */
         }
 
@@ -59,21 +59,12 @@
 
         <!-- Enlaces a las secciones -->
         <nav>
-            <a href="#contactO">Contacto</a>
+            <a href="contacto.html">+info & contacto</a>
         </nav>
+        
     </header>
 
-    <section id="gallery">
-        <div class="photo-gallery">
-            <img src="images/A1.jpg" alt="Foto 1" class="gallery-image" onclick="openModal('modal1')">
-            <img src="images/A2.jpg" alt="Foto 2" class="gallery-image" onclick="openModal('modal2')">
-            <img src="images/A3.jpg" alt="Foto 3" class="gallery-image" onclick="openModal('modal3')">
-            <img src="images/D.jpg" alt="Foto 4" class="gallery-image" onclick="openModal('modal4')">
-            <img src="images/TY.jpg" alt="Foto 5" class="gallery-image" onclick="openModal('modal5')">
-            
-            <!-- Agregar más imágenes según sea necesario -->
-        </div>
-    </section>
+
     
     <section id="horizontal-gallery">
         <div class="horizontal-photo-gallery">
@@ -82,7 +73,6 @@
             <img src="images/E3.jpg" alt="Foto 8" class="horizontal-gallery-image" onclick="openModal('modal8')">
             <img src="images/A4.jpg" alt="Foto 9" class="horizontal-gallery-image" onclick="openModal('modal9')">
             <img src="images/L.jpg" alt="Foto 10" class="horizontal-gallery-image" onclick="openModal('modal10')">
-            <img src="images/MDE.jpg" alt="Foto 11" class="horizontal-gallery-image" onclick="openModal('modal11')">
         </div>
     </section>
 
@@ -163,22 +153,16 @@
         <span class="close" onclick="closeModal('modal10')">&times;</span>
         <img class="modal-content" src="images/L.jpg" alt="Foto 10">
         <div class="prev" onclick="prevModal('modal10', 'modal9')">&#10094;</div>
-        <div class="next" onclick="nextModal('modal10', 'modal11')">&#10095;</div>
+        <div class="next" onclick="nextModal('modal10', 'modal12')">&#10095;</div>
     </div>
     
     <div id="modal11" class="modal">
         <span class="close" onclick="closeModal('modal11')">&times;</span>
         <img class="modal-content" src="images/MDE.jpg" alt="Foto 11">
-        <div class="prev" onclick="prevModal('modal11', 'modal10')">&#10094;</div>
-        <div class="next" onclick="nextModal('modal11', 'modal12')">&#10095;</div>
-    </div>
-    
-    <div id="modal12" class="modal">
-        <span class="close" onclick="closeModal('modal12')">&times;</span>
-        <img class="modal-content" src="images/P1.jpg" alt="Foto 12">
-        <div class="prev" onclick="prevModal('modal12', 'modal11')">&#10094;</div>
+        <div class="prev" onclick="prevModal('modal12', 'modal10')">&#10094;</div>
         <div class="next" onclick="nextModal('modal12', 'modal13')">&#10095;</div>
     </div>
+    
     
     <div id="modal13" class="modal">
         <span class="close" onclick="closeModal('modal13')">&times;</span>

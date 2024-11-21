@@ -4,28 +4,115 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Sobre mí y Contacto</title>
     <link rel="stylesheet" href="cont.css">
+    <style>
+        header {
+            background-color: rgb(0, 0, 0); /* Fondo negro */
+            display: flex; /* Utiliza flexbox */
+            justify-content: space-between; /* Alinea los elementos al inicio y al final */
+            align-items: center; /* Centra verticalmente los elementos */
+            padding: 20px;
+        }
+
+        /* Estilos para la imagen de fondo */
+        .background-container {
+            width: 200%;
+            height: 100vh; /* Toma el 100% del alto de la pantalla */
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            position: relative; /* Posición relativa para alinear la imagen */
+        }
+
+        .background-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Escala la imagen para que cubra todo el área del contenedor */
+            position: absolute; /* Posición absoluta para cubrir todo el contenedor */
+            top: 0; /* Posiciona la imagen en la parte superior */
+            left: 0; /* Posiciona la imagen en la parte izquierda */
+        }
+
+        /* Estilos para el logotipo */
+        .logo {
+            width: 200px; /* Tamaño del logotipo */
+            height: auto; /* Ajusta la altura automáticamente según el ancho */
+        }
+
+
+        header nav a {
+            color: white; /* Color blanco para los enlaces */
+            text-decoration: none; /* Sin subrayado */
+            margin: 0 10px; /* Espacio entre los enlaces */
+        }
+        section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .photo-section img {
+            width: 25%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .contact-container, .about-container {
+            margin-top: 10px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+
+        a.email-link {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        a.email-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <section class="contact-section">
-        <h1>CONTACTO</h1>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p>¿Tienes algo en mente?<br>¡Cuentame más!</p>
-                <p><a href="mailto:estradabuendiafermin@gmail.com" class="email-link">estradabuendiafermin@gmail.com</a></p>
-                <div class="social-icons">
-                    <!-- Enlace a Instagram -->
-                    <a href="https://www.instagram.com/fermineb/" target="_blank">
-                        <img src="images/instagram.png" alt="Instagram">
-                    </a>
-                    <!-- Enlace a WhatsApp -->
-                    <a href="https://wa.me/7351030557" target="_blank">
-                        <img src="images/whatsapp.png" alt="WhatsApp">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+
+<header>
+    <a href="index.html">
+        <img src="images/fec.png" alt="Logotipo" class="logo">
+    </a>
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav>
+</header>
+
+<section class="photo-section">
+    <img src="images/perfil.jpeg" alt="Foto de perfil">
+</section>
+
+<section class="about-section">
+    <h1>Sobre mí</h1>
+    <div class="about-container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nostrum quo distinctio? Eos provident harum pariatur quam animi? Amet dolore recusandae vero, maiores deleniti qui illum reprehenderit hic omnis modi.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <h1>Contacto</h1>
+    <div class="contact-container">
+        <p>¿Tienes algo en mente?</p>
+        <p><a href="mailto:estradabuendiafermin@gmail.com" class="email-link">estradabuendiafermin@gmail.com</a></p>
+        <p><a href="https://wa.me/7351030557" class="email-link">+527351030557</a></p>
+        <p><a href="https://www.instagram.com/fermineb/" class="email-link">@fermineb</a></p> 
+    </div>
+</section>
+
 </body>
 </html>
